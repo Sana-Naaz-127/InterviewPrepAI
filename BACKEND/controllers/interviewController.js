@@ -1,8 +1,13 @@
 const Interview = require("../models/Interview");
 
+const {
+  generateInterviewQuestions,
+} = require("../services/geminiServices");
+
 
 // CREATE INTERVIEW
 const createInterview = async (req, res) => {
+  console.log("CREATE INTERVIEW CONTROLLER HIT");
   try {
 
     const {
@@ -14,6 +19,28 @@ const createInterview = async (req, res) => {
       jobDescription,
       resume,
     } = req.body;
+
+    const generatedQuestionsText =
+    await generateInterviewQuestions(
+      targetRole,
+      interviewType,
+      difficulty,
+      skills || []
+    );
+
+  console.log("Generated Questions:");
+  console.log(generatedQuestionsText);
+  const generatedQuestions = generatedQuestionsText
+  .split("\n")
+  .filter(q => q.trim() !== "")
+  .map(q => ({
+    question: q.trim(),
+    answer: "",
+    feedback: "",
+    score: 0,
+  }));
+
+  console.log(generatedQuestions);
 
     const interview = await Interview.create({
       user: req.user.id,
@@ -29,7 +56,7 @@ const createInterview = async (req, res) => {
 
       resume: resume || "",
 
-      questions: [],
+      questions: generatedQuestions,
     });
 
     res.status(201).json({

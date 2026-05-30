@@ -1,14 +1,21 @@
 require("dotenv").config();
 
-const { testGemini } = require("./services/geminiServices");
+const {
+  generateInterviewQuestions,
+} = require("./services/geminiServices");
 
 async function runTest() {
   try {
-    const response = await testGemini();
+    const response = await generateInterviewQuestions(
+      "Frontend Developer",
+      "Technical",
+      "Medium",
+      ["HTML", "CSS", "JavaScript", "React"]
+    );
 
-    console.log("\n===== GEMINI RESPONSE =====");
+    console.log("\n===== INTERVIEW QUESTIONS =====\n");
     console.log(response);
-    console.log("===========================\n");
+    console.log("\n==============================\n");
   } catch (error) {
     console.error("Gemini Error:", error);
   }
