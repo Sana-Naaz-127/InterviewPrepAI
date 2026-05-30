@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Interview Prep | InterviewPrepAI</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="interviewprep.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Interview<span>PrepAI</span>
+    </div>
+
+    <ul class="nav-links">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="interviewprep.html">Interview Prep</a></li>
+      <li><a href="analytics.html">Analytics</a></li>
+      <li><a href="About.html">About</a></li>
+
+    </ul>
+
+    <button class="nav-btn">
+      Get Started
+    </button>
+
+  </nav>
+
+  <!-- ================= HEADER ================= -->
+
+  <section class="prep-header">
+
+    <p class="prep-tag">
+      AI MOCK INTERVIEW
+    </p>
+
+    <h1>
+      Practice Personalized AI Interviews
+    </h1>
+
+    <p>
+      Configure your interview settings and
+      start realistic AI-powered mock interviews.
+    </p>
+
+  </section>
+
+  <!-- ================= INTERVIEW CONFIG PANEL ================= -->
+
+  <section class="config-section">
+
+    <div class="config-card">
+
+      <!-- Interview Type -->
+
+      <div class="input-group">
+
+        <label>
+          Interview Type
+        </label>
+
+        <select id="interviewType">
+
+          <option>Technical Interview</option>
+          <option>Behavioral Interview</option>
+          <option>HR Interview</option>
+          <option>Sales Interview</option>
+          <option>Marketing Interview</option>
+
+        </select>
+
+      </div>
+
+      <!-- Difficulty -->
+
+      <div class="input-group">
+
+        <label>
+          Difficulty
+        </label>
+
+        <select id="difficulty">
+
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+          <option>Expert</option>
+
+        </select>
+
+      </div>
+
+      <!-- Target Role -->
+
+      <div class="input-group">
+
+        <label>
+          Target Role
+        </label>
+
+        <select id="targetRole">
+
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>Full Stack Developer</option>
+          <option>Software Engineer</option>
+
+        </select>
+
+      </div>
+
+      <!-- Interview Duration -->
+
+      <div class="input-group">
+
+        <label>
+          Interview Duration
+        </label>
+
+        <select id="duration">
+
+          <option>5 Minutes</option>
+          <option>10 Minutes</option>
+          <option>15 Minutes</option>
+
+        </select>
+
+      </div>
+
+      <!-- Skills -->
+
+      <div class="input-group">
+
+        <label>
+          Skills / Tech Stack
+        </label>
+
+        <input
+          type="text"
+          id="skills"
+          placeholder="React, JavaScript, Node.js"
+        >
+
+      </div>
+
+      <!-- Upload Resume -->
+
+      <div class="upload-box">
+
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+        <h3>
+          Drag & Drop Resume
+        </h3>
+
+        <p>
+          or Upload PDF
+        </p>
+
+        <input type="file" id="resumeUpload">
+
+      </div>
+
+      <!-- Job Description -->
+
+      <div class="input-group">
+
+        <label>
+          Paste Job Description
+        </label>
+
+        <textarea
+          id="jobDescription"
+          placeholder="Paste job description here..."
+        ></textarea>
+
+      </div>
+
+      <!-- Button -->
+
+      <button class="start-btn" id="startInterviewBtn">
+        Start AI Interview
+      </button>
+
+    </div>
+
+  </section>
+
+  <script src="interviewprep.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | InterviewPrepAI</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- DASHBOARD CSS -->
+  <link rel="stylesheet" href="dashboard.css">
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    Interview<span>PrepAI</span>
+  </div>
+
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="interviewprep.html">Interview Prep</a></li>
+    <li><a href="analytics.html">Analytics</a></li>
+    <li><a href="About.html">About</a></li>
+
+  </ul>
+
+  <button class="nav-btn" onclick="logout()">
+    Logout
+  </button>
+
+</nav>
+
+  <!-- ================= DASHBOARD HEADER ================= -->
+
+  <section class="dashboard-header">
+
+    <div class="dashboard-top">
+
+      <div class="welcome-text">
+
+   <p id="welcomeMessage">
+      Welcome Back 👋
+   </p>
+
+        <h1>
+          Track your interview preparation progress,
+          analyze performance, and improve smarter with AI.
+        </h1>
+
+      </div>
+
+      <div class="profile-circle">
+
+        <i class="fa-solid fa-user"></i>
+
+      </div>
+
+    </div>
+
+    <!-- ================= STATS CARDS ================= -->
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+
+        <h3>Total Interviews</h3>
+
+        <h2>12</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Average Score</h3>
+
+        <h2>82%</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Best Performance</h3>
+
+        <h2>Frontend</h2>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Need Improvement</h3>
+
+        <h2>Communication</h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= ACTIVITY SECTION ================= -->
+
+  <section class="activity-section">
+
+    <h2>
+      Recent Interview Activity
+    </h2>
+
+    <div class="table-container">
+
+      <table>
+
+        <tr>
+          <th>Interview Type</th>
+          <th>Score</th>
+          <th>Difficulty</th>
+          <th>Date</th>
+        </tr>
+
+        <tr>
+          <td>Frontend Development</td>
+          <td>84%</td>
+          <td>Medium</td>
+          <td>Today</td>
+        </tr>
+
+        <tr>
+          <td>HR Interview</td>
+          <td>76%</td>
+          <td>Easy</td>
+          <td>Yesterday</td>
+        </tr>
+
+        <tr>
+          <td>DSA Round</td>
+          <td>68%</td>
+          <td>Hard</td>
+          <td>2 Days Ago</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </section>
+
+  <!-- ================= INSIGHTS SECTION ================= -->
+
+  <section class="insights-section">
+
+    <div class="insight-card">
+
+      <h2>
+        Strengths
+      </h2>
+
+      <ul>
+        <li>Problem Solving</li>
+        <li>React Development</li>
+        <li>Communication</li>
+      </ul>
+
+    </div>
+
+    <div class="insight-card">
+
+      <h2>
+        Areas To Improve
+      </h2>
+
+      <ul>
+        <li>System Design</li>
+        <li>DBMS Concepts</li>
+        <li>Confidence</li>
+      </ul>
+
+    </div>
+
+  </section>
+  <script src="dashboard.js"></script>
+  <button onclick="logout()">
+    Logout
+</button>
+
+</body>
+
+</html>
