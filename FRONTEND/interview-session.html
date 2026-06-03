@@ -17,7 +17,6 @@
   >
 
 </head>
-<script src="interview-session.js"></script>
 
 <body>
 
@@ -32,15 +31,15 @@
     <div>
       Time Left: 24:12
     </div>
-
-    <div>
-      Question 3/10
+    
+    <div id="questionCounter">
+      Question 1/1
     </div>
 
   </section>
-
+  
   <!-- ================= SESSION INFO ================= -->
-
+  
   <div class="session-info">
 
   <h2 id="roleText"></h2>
@@ -50,48 +49,49 @@
 
 </div>
 
-  <!-- ================= CHAT AREA ================= -->
+<!-- ================= CHAT AREA ================= -->
 
-  <section class="chat-section">
-
-    <div class="chat-window">
+<section class="chat-section">
+  
+  <div class="chat-window">
 
       <!-- AI MESSAGE -->
+      
+    <div class="message ai-message">
 
-      <div class="message ai-message">
+      <p id="questionText">
+        Loading question...
+      </p>
 
-        <p>
-          Explain event delegation in JavaScript.
-        </p>
-
-      </div>
+    </div>
 
       <!-- USER MESSAGE -->
-
+      
       <div class="message user-message">
-
+        
         <p>
           Event delegation is a technique where
           events are handled at a parent level.
         </p>
-
+        
       </div>
 
     </div>
-
+    
   </section>
-
+  
   <!-- ================= INPUT AREA ================= -->
-
+  
   <section class="input-section">
-
+    
     <div class="input-container">
-
-      <input
-        type="text"
-        placeholder="Type your answer here..."
-      >
-
+      
+    <input
+      type="text"
+      id="answerInput"
+      placeholder="Type your answer here..."
+    >
+      
       <button class="mic-btn">
         <i class="fa-solid fa-microphone"></i>
       </button>
@@ -101,20 +101,20 @@
       </button>
 
     </div>
-
+    
     <!-- CONTROLS -->
-
+    
     <div class="controls">
 
-      <button>
+      <button id="nextBtn">
         Next Question
       </button>
 
       <button>
         Skip Question
       </button>
-
-      <button>
+      
+      <button id="endInterviewBtn">
         End Interview
       </button>
 
@@ -122,6 +122,7 @@
 
   </section>
 
+<script src="interview-session.js"></script>
 </body>
 
 </html>
