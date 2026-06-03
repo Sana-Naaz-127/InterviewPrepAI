@@ -52,6 +52,25 @@ const interviewSchema = new mongoose.Schema({
     },
   ],
 
+    evaluationFeedback: {
+    type: String,
+    default: "",
+  },
+
+  overallScore: {
+    type: Number,
+    default: 0,
+  },
+
+  completed: {
+    type: Boolean,
+    default: false,
+  },
+
+  completedAt: {
+    type: Date,
+  },
+
   createdAt: {
     type: Date,
     default: Date.now,

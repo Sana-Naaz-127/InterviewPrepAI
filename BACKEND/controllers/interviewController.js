@@ -2,6 +2,7 @@ const Interview = require("../models/Interview");
 
 const {
   generateInterviewQuestions,
+  evaluateInterviewAnswers,
 } = require("../services/geminiServices");
 
 
@@ -89,6 +90,95 @@ const getMyInterviews = async (req, res) => {
     });
 
   } catch (error) {
+
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+
+  }
+};
+// GET INTERVIEW BY ID
+const getInterviewById = async (req, res) => {
+  try {
+
+    const interview = await Interview.findById(
+      req.params.id
+    );
+
+    if (!interview) {
+      return res.status(404).json({
+        success: false,
+        message: "Interview not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      interview,
+    });
+
+  } catch (error) {
+
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+
+  }
+};
+
+const evaluateInterview = async (req, res) => {
+  try {
+
+    console.log("REQUEST BODY:", req.body);
+
+    const {
+      interviewId,
+      questions,
+      answers
+    } = req.body;
+
+    console.log("Interview ID:", interviewId);
+
+    const feedback = await evaluateInterviewAnswers(
+      questions,
+      answers
+    );
+
+    console.log("Feedback:", feedback);
+
+    const overallScoreMatch =
+      feedback.match(/OVERALL_SCORE:\s*(\d+)/);
+
+    const overallScore =
+      overallScoreMatch
+        ? parseInt(overallScoreMatch[1])
+        : 0;
+
+    const updatedInterview =
+      await Interview.findByIdAndUpdate(
+        interviewId,
+        {
+          evaluationFeedback: feedback,
+          overallScore,
+          completed: true,
+          completedAt: new Date(),
+        },
+        { new: true }
+      );
+
+    console.log("UPDATED INTERVIEW:");
+    console.log(updatedInterview);
+
+    res.status(200).json({
+      success: true,
+      feedback,
+    });
+
+  } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       success: false,
       message: error.message,
@@ -96,8 +186,9 @@ const getMyInterviews = async (req, res) => {
   }
 };
 
-
 module.exports = {
   createInterview,
   getMyInterviews,
+  getInterviewById,
+  evaluateInterview,
 };
