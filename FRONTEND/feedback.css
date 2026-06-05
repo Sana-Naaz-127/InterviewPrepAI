@@ -111,3 +111,25 @@ body{
     color: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
+
+.back-btn {
+  background: #004d40;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #00695c;
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(0, 77, 64, 0.35);
+}

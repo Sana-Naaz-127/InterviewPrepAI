@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview History</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="history.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Interview<span>PrepAI</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="interviewprep.html">Interview Prep</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+
+        <button
+        class="nav-btn"
+        id="navActionBtn">
+            Get Started
+        </button>
+
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+
+    <!-- HISTORY SECTION -->
+
+    <div class="container">
+
+        <h1>Interview History</h1>
+
+        <div class="analytics-container">
+
+            <div class="analytics-card">
+                <h3>Total Interviews</h3>
+                <p id="totalInterviews">0</p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Average Score</h3>
+                <p id="averageScore">0</p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Highest Score</h3>
+                <p id="highestScore">0</p>
+            </div>
+
+            <div class="analytics-card">
+                <h3>Latest Score</h3>
+                <p id="latestScore">0</p>
+            </div>
+
+        </div>
+
+        <h2> Interview History</h2>
+
+        <div id="historyContainer"></div>
+
+    </div>
+    <script src="authGuard.js"></script>
+    <script src="history.js"></script>
+    <script src="logout.js"></script>
+
+</body>
+</html>
