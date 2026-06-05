@@ -26,7 +26,8 @@ const createInterview = async (req, res) => {
       targetRole,
       interviewType,
       difficulty,
-      skills || []
+      skills || [],
+      interviewDuration
     );
 
   console.log("Generated Questions:");
