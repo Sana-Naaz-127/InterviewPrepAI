@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Feedback</title>
+
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+  <div class="feedback-container">
+
+      <button
+        class="back-btn"
+        onclick="window.location.href='history.html'"
+      >
+        ← Back to History
+      </button>
+
+    <h1>Interview Feedback</h1>
+
+    <div id="performanceBadge" class="performance-badge">
+        Loading Performance...
+    </div>
+
+    <div class="scores-container">
+
+      <div class="score-card">
+        <h3>Overall Score</h3>
+        <p id="overallScore">--</p>
+      </div>
+
+      <div class="score-card">
+        <h3>Communication</h3>
+        <p id="communicationScore">--</p>
+      </div>
+
+      <div class="score-card">
+        <h3>Technical</h3>
+        <p id="technicalScore">--</p>
+      </div>
+
+      <div class="score-card">
+        <h3>Confidence</h3>
+        <p id="confidenceScore">--</p>
+      </div>
+
+    </div>
+
+    <div class="feedback-section">
+      <h2>Strengths</h2>
+      <ul id="strengthsList"></ul>
+    </div>
+
+    <div class="feedback-section">
+      <h2>Areas for Improvement</h2>
+      <ul id="improvementsList"></ul>
+    </div>
+
+    <div class="feedback-section">
+      <h2>Summary</h2>
+      <p id="summaryText"></p>
+    </div>
+
+  </div>
+
+  <script src="feedback.js"></script>
+
+</body>
+</html>

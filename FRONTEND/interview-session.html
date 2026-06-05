@@ -17,7 +17,6 @@
   >
 
 </head>
-<script src="interview-session.js"></script>
 
 <body>
 
@@ -26,21 +25,21 @@
   <section class="session-topbar">
 
     <div>
-      Frontend Interview
+      Interview Ongoing
     </div>
 
-    <div>
-      Time Left: 24:12
+    <div id="timer">
+      Time Left: 00:00
     </div>
-
-    <div>
-      Question 3/10
+    
+    <div id="questionCounter">
+      Question 1/1
     </div>
 
   </section>
-
+  
   <!-- ================= SESSION INFO ================= -->
-
+  
   <div class="session-info">
 
   <h2 id="roleText"></h2>
@@ -50,48 +49,38 @@
 
 </div>
 
-  <!-- ================= CHAT AREA ================= -->
+<!-- ================= CHAT AREA ================= -->
 
-  <section class="chat-section">
-
-    <div class="chat-window">
+<section class="chat-section">
+  
+  <div class="chat-window">
 
       <!-- AI MESSAGE -->
+      
+    <div class="message ai-message">
 
-      <div class="message ai-message">
-
-        <p>
-          Explain event delegation in JavaScript.
-        </p>
-
-      </div>
-
-      <!-- USER MESSAGE -->
-
-      <div class="message user-message">
-
-        <p>
-          Event delegation is a technique where
-          events are handled at a parent level.
-        </p>
-
-      </div>
+      <p id="questionText">
+        Loading question...
+      </p>
 
     </div>
 
+    </div>
+    
   </section>
-
+  
   <!-- ================= INPUT AREA ================= -->
-
+  
   <section class="input-section">
-
+    
     <div class="input-container">
-
-      <input
-        type="text"
-        placeholder="Type your answer here..."
-      >
-
+      
+    <input
+      type="text"
+      id="answerInput"
+      placeholder="Type your answer here..."
+    >
+      
       <button class="mic-btn">
         <i class="fa-solid fa-microphone"></i>
       </button>
@@ -101,27 +90,20 @@
       </button>
 
     </div>
-
+    
     <!-- CONTROLS -->
-
+    
     <div class="controls">
-
-      <button>
-        Next Question
-      </button>
-
-      <button>
-        Skip Question
-      </button>
-
-      <button>
-        End Interview
-      </button>
+      <button id="prevBtn">Previous Question</button>
+      <button id="nextBtn">Next Question</button>
+      <button id="skipBtn">Skip Question</button>
+      <button id="endInterviewBtn">End Interview</button>
 
     </div>
 
   </section>
 
+<script src="interview-session.js"></script>
 </body>
 
 </html>

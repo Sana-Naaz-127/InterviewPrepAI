@@ -79,11 +79,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
       console.log(data);
 
-      if(response.ok){
+      if (response.ok) {
 
+        // Full interview document from MongoDB
         localStorage.setItem(
           "interviewData",
-          JSON.stringify(interviewData)
+          JSON.stringify(data.interview)
+        );
+
+        // MongoDB interview ID
+        localStorage.setItem(
+          "interviewId",
+          data.interview._id
         );
 
         alert("Interview Created Successfully");
@@ -93,7 +100,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
       } else {
 
-        alert(data.message || "Error creating interview");
+        alert(
+          data.message ||
+          "Error creating interview"
+        );
 
       }
 

@@ -3,7 +3,7 @@
 .dashboard-header{
     padding: 140px 8% 60px;
 
-    background: #f5f5f5;
+    background:#f5f0dc;
 }
 
 
@@ -40,27 +40,49 @@
 }
 
 
-/* ================= PROFILE CIRCLE ================= */
+/* ================= PROFILE CARD ================= */
+.profile-card{
 
-.profile-circle{
-    width: 90px;
-    height: 90px;
+    background: #0A3323;
+    color: white;
 
-    border-radius: 50%;
+    padding:25px;
 
-    background: white;
+    border-radius:20px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width:250px;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.08);
 }
 
-.profile-circle i{
-    font-size: 34px;
+.profile-card h3{
 
-    color: #0A3323;
+    margin-bottom:15px;
+
+    color:white;
+
+    font-size:24px;
+}
+
+.profile-card p{
+
+    margin:10px 0;
+
+    color:#f5f0dc;
+
+    font-size:16px;
+}
+
+.dashboard-subtitle{
+
+    color:#666;
+
+    font-size:18px;
+
+    max-width:650px;
+
+    margin-top:15px;
 }
 
 
@@ -76,13 +98,10 @@
 
 .stat-card{
     background: white;
-
-    padding: 35px;
-
+    border-top: 5px solid #0A3323;
+    padding: 25px;
     border-radius: 20px;
-
     box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-
     transition: 0.3s ease;
 }
 
@@ -92,15 +111,12 @@
 
 .stat-card h3{
     font-size: 18px;
-
     color: #666;
-
     margin-bottom: 15px;
 }
 
 .stat-card h2{
-    font-size: 34px;
-
+    font-size: 28px;
     color: #0A3323;
 }
 
@@ -245,4 +261,55 @@ td{
         padding: 16px;
         font-size: 14px;
     }
+}
+
+.strengths-card{
+    background: #f8fff9;
+}
+
+.improve-card{
+    background: #fffaf7;
+}
+
+.chart-section{
+    padding: 40px 8%;
+}
+
+.chart-section{
+    padding: 50px 8%;
+}
+
+.chart-card{
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    max-width: 900px;
+
+    height: 380px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.chart-card h2{
+    color: #0A3323;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+#scoreTrendChart{
+    width: 100% !important;
+
+    height: 280px !important;
+
+    background: #ffffff;
 }

@@ -37,14 +37,15 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="dashboard.html">Dashboard</a></li>
     <li><a href="interviewprep.html">Interview Prep</a></li>
-    <li><a href="analytics.html">Analytics</a></li>
+    <li><a href="history.html">History</a></li>
     <li><a href="About.html">About</a></li>
-
   </ul>
 
-  <button class="nav-btn" onclick="logout()">
-    Logout
-  </button>
+    <button
+    class="nav-btn"
+    id="navActionBtn">
+        Get Started
+    </button>
 
 </nav>
 
@@ -60,112 +61,91 @@
       Welcome Back 👋
    </p>
 
-        <h1>
-          Track your interview preparation progress,
-          analyze performance, and improve smarter with AI.
-        </h1>
+    <h1>
+      Ready for your next interview?
+    </h1>
+
+    <p class="dashboard-subtitle">
+      Track your progress, monitor performance,
+      and improve with AI-powered insights.
+    </p>
 
       </div>
 
-      <div class="profile-circle">
-
-        <i class="fa-solid fa-user"></i>
-
+      <div class="profile-card">
+        
+        <h3 id="profileName">
+          User
+        </h3>
+        
+        <p>
+          Interviews:
+          <span id="profileInterviews">
+            0
+          </span>
+        </p>
+        
+        <p>
+          Avg Score:
+          <span id="profileAverage">
+            0
+          </span>
+        </p>
+        
+        <p>
+          Highest Score:
+          <span id="profileHighest">
+            0
+          </span>
+        </p>
+      </div>
       </div>
 
-    </div>
+ <!-- ================= STATS CARDS ================= -->
+      <div class="stats-grid">
 
-    <!-- ================= STATS CARDS ================= -->
+        <div class="stat-card">
+          <h3>Total Interviews</h3>
+          <h2 id="totalInterviews">0</h2>
+        </div>
 
-    <div class="stats-grid">
+        <div class="stat-card">
+          <h3>Average Score</h3>
+          <h2 id="averageScore">0</h2>
+        </div>
 
-      <div class="stat-card">
+        <div class="stat-card">
+          <h3>Highest Score</h3>
+          <h2 id="highestScore">0</h2>
+        </div>
 
-        <h3>Total Interviews</h3>
-
-        <h2>12</h2>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h3>Average Score</h3>
-
-        <h2>82%</h2>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h3>Best Performance</h3>
-
-        <h2>Frontend</h2>
+        <div class="stat-card">
+          <h3>Latest Score</h3>
+          <h2 id="latestScore">0</h2>
+        </div>
 
       </div>
-
-      <div class="stat-card">
-
-        <h3>Need Improvement</h3>
-
-        <h2>Communication</h2>
-
-      </div>
-
-    </div>
 
   </section>
 
-  <!-- ================= ACTIVITY SECTION ================= -->
+  <section class="chart-section">
 
-  <section class="activity-section">
+    <div class="chart-card">
 
-    <h2>
-      Recent Interview Activity
-    </h2>
+        <h2>Score Trend</h2>
 
-    <div class="table-container">
-
-      <table>
-
-        <tr>
-          <th>Interview Type</th>
-          <th>Score</th>
-          <th>Difficulty</th>
-          <th>Date</th>
-        </tr>
-
-        <tr>
-          <td>Frontend Development</td>
-          <td>84%</td>
-          <td>Medium</td>
-          <td>Today</td>
-        </tr>
-
-        <tr>
-          <td>HR Interview</td>
-          <td>76%</td>
-          <td>Easy</td>
-          <td>Yesterday</td>
-        </tr>
-
-        <tr>
-          <td>DSA Round</td>
-          <td>68%</td>
-          <td>Hard</td>
-          <td>2 Days Ago</td>
-        </tr>
-
-      </table>
+        <canvas id="scoreTrendChart"></canvas>
 
     </div>
 
-  </section>
+</section>
+
 
   <!-- ================= INSIGHTS SECTION ================= -->
 
   <section class="insights-section">
 
-    <div class="insight-card">
+    <div class="insight-card strengths-card">
 
       <h2>
         Strengths
@@ -179,7 +159,7 @@
 
     </div>
 
-    <div class="insight-card">
+    <div class="insight-card improve-card">
 
       <h2>
         Areas To Improve
@@ -194,11 +174,9 @@
     </div>
 
   </section>
-  <script src="dashboard.js"></script>
-  <button onclick="logout()">
-    Logout
-</button>
-
+<script src="authGuard.js"></script>
+<script src="logout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
 </body>
-
 </html>
